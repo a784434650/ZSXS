@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.huida.zsxs.R;
 import com.huida.zsxs.activity.CourseActivity;
+import com.huida.zsxs.activity.SearchActivity;
 import com.huida.zsxs.bean.CourseType;
 
 import org.xutils.common.Callback;
@@ -84,6 +85,8 @@ public class CourseFragment extends BaseFragment implements View.OnClickListener
 
     @Override
     protected void initListener() {
+
+        right_top_search.setOnClickListener(this);
         ib_exam.setOnClickListener(this);
         ib_life.setOnClickListener(this);
         ib_work.setOnClickListener(this);
@@ -119,6 +122,10 @@ public class CourseFragment extends BaseFragment implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.right_top_search:
+                Intent intent = new Intent(mActivity, SearchActivity.class);
+                startActivity(intent);
+                break;
             case R.id.ib_exam:
                 ib_exam.setSelected(true);
                 ib_work.setSelected(false);
