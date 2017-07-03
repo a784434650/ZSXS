@@ -45,7 +45,7 @@ import org.xutils.x;
 import java.util.List;
 
 /**
- * Created by xiaojiu on 2017/7/2.
+ * Created by xiaojiu on 2017/7/2.法人和地方很多很多
  */
 
 public class SearchPager {
