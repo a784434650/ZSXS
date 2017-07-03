@@ -49,6 +49,10 @@ public class AudioActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.ib_back:
+                finish();
+                break;
+        }
     }
 }
