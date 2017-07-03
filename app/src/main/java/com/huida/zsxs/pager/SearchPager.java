@@ -107,7 +107,7 @@ public class SearchPager {
         fl_pager_search.addView(view,0);
 
     }
-    //获得搜索的内容
+    //获取保存最近搜索内容的方法
     private void getSearchFileData() {
         String file = SpUtil.getString(SAVE_FILE, activity);
         split = file.split(",");
@@ -138,6 +138,7 @@ public class SearchPager {
             return tv;
         }
     }
+    //获取初始化的数据
     private void getInitData() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action", "getKeywords");
@@ -305,7 +306,7 @@ public class SearchPager {
                 if (courseList.size()==0){
                     ll_no_data.setVisibility(View.VISIBLE);
                     return;
-                    //无搜索内容，单击跳转到征订页面
+                    //无搜索内容，单击跳转到征订页面（个人中心）
 
 
                 }
@@ -335,7 +336,7 @@ public class SearchPager {
                 lv_search_data_page.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        //条目单击事件
+                        //条目单击事件（播放等）
 
 
                     }
