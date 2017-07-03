@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+    }
+]

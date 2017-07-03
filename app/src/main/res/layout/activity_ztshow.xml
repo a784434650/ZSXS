@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_ztshow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        style="@style/rl_topbar_bg">
+        <Button
+            android:id="@+id/bt_zt_showback"
+            style="@style/bt_topbar_back"/>
+    </RelativeLayout>
+    <com.huida.zsxs.view.ProgressLayout
+        app:progressBackground="#fff"
+        app:progress="false"
+        android:id="@+id/pl_ztshow_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/iv_ztshow_detaild"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@mipmap/guodu_icon"
+                    />
+                <com.huida.zsxs.view.NoSrollGridview
+                    android:listSelector="@drawable/bg_gary_selector"
+                    android:numColumns="1"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/gv_ztshow_detail"></com.huida.zsxs.view.NoSrollGridview>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.huida.zsxs.view.ProgressLayout>
+</LinearLayout>

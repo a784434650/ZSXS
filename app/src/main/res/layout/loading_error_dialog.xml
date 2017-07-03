@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="240dp"
+              android:layout_height="wrap_content"
+              android:background="#ffffffff"
+              android:orientation="vertical"
+              android:paddingBottom="10.0dip">
+
+    <TextView
+        android:id="@+id/nindexuebi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:gravity="center_vertical"
+        android:text="提示:"
+        android:textColor="#ffdf863d"
+        android:textSize="18.0sp"/>
+
+    <View
+        android:id="@+id/line_xuefen"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@mipmap/my_center_line"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:gravity="center_vertical"
+        android:text="网络发生错误"
+        android:textColor="#ff797979"
+        android:textSize="15.0sp"/>
+
+    <Button
+        android:id="@+id/ib_submit_buy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="15.0dip"
+        android:background="#66cccccc"
+        android:padding="10.0dip"
+        android:text="确定"
+        android:textColor="#ff99dd8b"
+        android:textStyle="bold"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bgcolor">#325132</color>
+    <color name="gray">#f5e1dfdf</color>
+    <color name="text_gray">#ffa7a7a7</color>
+    <color name="nomalColor">#0b840b</color>
+    <color name="refresh">#7e7a7a</color>
+    <color name="btcolor">#157315</color>
+    <color name="yzm_color">#288901</color>
+    <color name="pager_focus_textcolor">#ff2e9f29</color>
+    <color name="pager_nomal_textcolor">#ff474a4b</color>
+    <color name="white">@android:color/white</color>
+    <color name="center_green">#325132</color>
+    <color name="green">#4aab4a</color>
+    <color name="course_type">#c1c4bd</color>
+    <color name="course_black">#000000</color>
+    <color name="text_green">#5fda5f</color>
+</resources>

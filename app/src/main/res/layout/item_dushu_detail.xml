@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10.0dip">
+
+        <ImageView
+            android:id="@+id/dushu_image"
+            android:layout_width="75.0dip"
+            android:layout_height="105.0dip"
+            android:background="@mipmap/dushu_guodu"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_toRightOf="@id/dushu_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="[口才演讲]当众讲话如何不紧张"
+                android:textSize="18.0sp"/>
+
+            <TextView
+                android:id="@+id/tv_article_item_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="7.0dip"
+                android:maxLines="2"
+                android:text="hfsdifsiofjsiojfisojfisdojfsdfjsfjsfjsfjs"
+                android:textColor="#ffd1cdca"
+                android:textSize="15.0sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="2.0dip"
+                android:paddingTop="4.0dip">
+                <ImageView
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/jifen_smart"
+                    />
+                <TextView
+                    android:id="@+id/tv_jifen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:gravity="center_vertical"
+                    android:text="3900积分"
+                    android:textColor="#ff2e9f29"
+                    android:textSize="12.0sp"/>
+
+                <TextView
+                    android:id="@+id/tv_dianjiliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:drawableLeft="@mipmap/dianjiliang_smart"
+                    android:gravity="center_vertical"
+                    android:text="10"
+                    android:textColor="#ff2e9f29"
+                    android:textSize="12.0sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/xiazai_no_gouxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/xiazai_no_gouxuan"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        android:background="@mipmap/my_center_line"/>
+</LinearLayout>

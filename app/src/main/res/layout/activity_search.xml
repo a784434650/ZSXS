@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    style="@style/rl_topbar_bg">
+    <Button
+        android:id="@+id/bt_search_back"
+        style="@style/bt_topbar_back" />
+       <EditText
+           android:id="@+id/et_search_list"
+           android:layout_width="210dp"
+           android:layout_height="35dp"
+           android:hint="请输入您想搜索的内容"
+           android:layout_centerInParent="true"
+           android:layout_marginLeft="15dp"
+           android:paddingLeft="10dp"
+           android:textSize="15sp"
+           android:background="@mipmap/search_back_list"/>
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="搜索"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="20dp"
+        android:layout_centerVertical="true"/>
+        <ImageButton
+            android:id="@+id/ib_clear_edit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/clear_edit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="80dp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <!--指示器-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--标题栏-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ll_search_title"
+            android:paddingTop="15.0dip"
+            android:paddingBottom="15.0dip"
+            android:background="@color/gray"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#ff2e9f29"
+                android:gravity="center"
+                android:id="@+id/search_shipin_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="视频"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textColor="#ff474a4b"
+                android:gravity="center"
+                android:id="@+id/search_yinpin_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="音频"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textColor="#ff474a4b"
+                android:gravity="center"
+                android:id="@+id/search_dushu_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="读书"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textColor="#ff474a4b"
+                android:gravity="center"
+                android:id="@+id/search_wenzhang_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="文章"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+        <View
+            android:layout_alignBottom="@id/ll_search_title"
+            android:id="@+id/search_view_line"
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:background="#ff2e9f29" />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

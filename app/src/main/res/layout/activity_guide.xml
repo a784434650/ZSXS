@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vp_guide"></android.support.v4.view.ViewPager>
+    <ImageButton
+        android:id="@+id/ib_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/queky_tiyan"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_guide"
+            android:orientation="horizontal"
+            ></LinearLayout>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/iv_red_point"
+            android:background="@drawable/red_point"/>
+    </RelativeLayout>
+</RelativeLayout>

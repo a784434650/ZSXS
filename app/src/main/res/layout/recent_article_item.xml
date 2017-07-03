@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/article_item_ll"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_gary_selector"
+              android:orientation="vertical"
+              android:padding="10.0dip">
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:id="@+id/tv_recent_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15.0dip"
+        android:maxLines="2"
+        android:text="[口才演讲]当众讲话如何不紧张"
+        android:textSize="18.0sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20.0dip"
+        android:paddingTop="7.0dip">
+
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="100.0dip"
+            android:layout_height="70.0dip"
+            android:background="@mipmap/guodu_icon"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/article_item_info_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_toRightOf="@id/article_image"
+            android:maxLines="3"
+            android:text="hfsdifsiofjsiojfisojfisdojfsdfjsfjsfjsfjs"
+            android:textColor="#ffd1cdca"
+            android:textSize="15.0sp"/>
+
+        <ImageView
+            android:id="@id/xiazai_no_gouxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/xiazai_no_gouxuan"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="2.0dip"
+        android:paddingTop="4.0dip">
+
+        <TextView
+            android:id="@+id/shangchuan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="上传："
+            android:textColor="#44000000"
+            android:textSize="13.0sp"/>
+
+        <TextView
+            android:id="@+id/tv_shangchuan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@id/shangchuan_tv"
+            android:text="小王子"
+            android:textColor="#44000000"
+            android:textSize="13.0sp"/>
+
+        <TextView
+            android:id="@+id/yuedu_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="10万"
+            android:textColor="#44000000"
+            android:textSize="13.0sp"/>
+
+        <TextView
+            android:id="@id/tv_dianjiliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toLeftOf="@id/yuedu_tv"
+            android:text="阅读:"
+            android:textColor="#44000000"
+            android:textSize="13.0sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="#fff2f2f2"
+        android:visibility="visible"/>
+</LinearLayout>

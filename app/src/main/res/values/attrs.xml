@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--圆圈加载更多-->
+    <declare-styleable name="ProgressLayout">
+        <attr name="progressBackground" format="color"/>
+        <attr name="progress" format="boolean"/>
+    </declare-styleable>
+    <!---->
+    <declare-styleable name="FlowLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="mxLine" format="integer" />
+    </declare-styleable>
+
+</resources>

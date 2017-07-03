@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_no_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="@mipmap/list_course_no_data"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="没有找到您搜索的课程"
+        android:textColor="#66000000"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="请尝试其它关键词进行搜索"
+        android:textColor="#66000000"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_zhengdin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="还可以征订该课程"
+        android:textColor="#ff0a7409"
+        android:textSize="13sp"/>
+</LinearLayout>

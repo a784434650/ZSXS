@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_audio"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huida.myapplication.Activity.AudioActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/center_green"
+        android:padding="8dp">
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="音频中心"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+<LinearLayout
+    android:padding="8dp"
+    android:background="@color/course_type"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_info"
+        android:drawableBottom="@mipmap/white_sanjiao_back"
+        android:gravity="center"
+        android:text="详情.评论"
+        android:textColor="@color/center_green"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_kclist"
+        android:gravity="center"
+        android:text="课程列表"
+        android:textColor="@color/course_black"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_audio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--首页下方四个按钮-->
+    <style name="radioButtonStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/rbt_textcolor_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--2017-->
+    <style name="ZtLayoutStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="ZtPicStyle">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+    </style>
+    <style name="ZtTxtStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--三个百分课文字样式-->
+    <style name="BfkTxtStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:lines">1</item>
+    </style>
+    <!--各个标题栏背景-->
+    <style name="rl_topbar_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">#ff315031</item>
+    </style>
+    <!--标题返回按钮-->
+    <style name="bt_topbar_back">
+        <item name="android:lines">1</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawableLeft">@mipmap/back</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_centerVertical">true</item>
+
+    </style>
+</resources>

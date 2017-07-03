@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.huida.zsxs.view.NoscrollViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.huida.zsxs.view.NoscrollViewPager>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="#bdede9e9">
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/radioButtonStyle"
+            android:text="首页"
+            android:drawableTop="@drawable/home_image_selector"
+            />
+        <RadioButton
+            android:id="@+id/rb_course"
+            style="@style/radioButtonStyle"
+            android:text="选课"
+            android:drawableTop="@drawable/course_image_selector"
+            />
+        <RadioButton
+            android:id="@+id/rb_mycourse"
+            style="@style/radioButtonStyle"
+            android:text="我的课"
+            android:drawableTop="@drawable/mycourse_image_selector"
+            />
+        <RadioButton
+            android:id="@+id/rb_personal"
+            style="@style/radioButtonStyle"
+            android:text="个人中心"
+            android:drawableTop="@drawable/personal_image_selector"
+            />
+    </RadioGroup>
+</RelativeLayout>

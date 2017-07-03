@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "D:\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "D:\\androidSpace\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "C:\\AndroidWork\\ZSXS\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    }
+]

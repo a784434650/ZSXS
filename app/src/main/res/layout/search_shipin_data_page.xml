@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.huida.zsxs.view.ProgressLayout
+        app:progressBackground="#fff"
+        app:progress="false"
+        android:id="@+id/pl_shipin_data_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/search_no_data"/>
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:divider="#00000000"
+            android:listSelector="@drawable/bg_gary_selector"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_search_data_page"
+            android:background="#fff"
+            app:ptrHeaderTextColor="@color/refresh"
+            app:ptrHeaderSubTextColor="@color/refresh"
+            app:ptrAnimationStyle="flip"
+            ></com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </com.huida.zsxs.view.ProgressLayout>
+
+</LinearLayout>

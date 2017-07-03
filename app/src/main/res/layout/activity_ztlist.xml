@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_ztlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        style="@style/rl_topbar_bg">
+        <Button
+            android:id="@+id/bt_zt_listback"
+            style="@style/bt_topbar_back"/>
+    </RelativeLayout>
+    <com.huida.zsxs.view.ProgressLayout
+        ptr:progressBackground="#fff"
+        ptr:progress="false"
+        android:id="@+id/pl_zt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_zt_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none"
+            ptr:ptrHeaderTextColor="@color/refresh"
+            ptr:ptrHeaderSubTextColor="@color/refresh"
+            ptr:ptrAnimationStyle="flip"
+            android:divider="@null"
+            ptr:ptrDrawableEnd="@android:color/transparent"
+            android:listSelector="@android:color/transparent">
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </com.huida.zsxs.view.ProgressLayout>
+</LinearLayout>

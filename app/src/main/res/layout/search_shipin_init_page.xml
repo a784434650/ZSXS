@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="最近搜索"
+                    android:textColor="#ff747474"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_delete_zuijin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@mipmap/item_delete"
+                    android:scaleType="fitXY"/>
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_zuijin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:horizontalSpacing="1dp"
+                android:listSelector="#00000000"
+                android:numColumns="2"
+                android:verticalSpacing="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="热门搜索"
+                android:textColor="#ff747474"/>
+            <com.huida.zsxs.view.ProgressLayout
+                android:visibility="visible"
+                app:progressBackground="#fff"
+                app:progress="false"
+                android:id="@+id/pl_shipin_base_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ScrollView
+                android:id="@+id/sc_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_or"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffffff"
+                    android:orientation="vertical">
+                    <com.huida.zsxs.view.FlowLayout
+                        android:id="@+id/flow"
+                        app:lineSpacing="10dp"
+                        app:mxLine="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="20dp"/>
+                </LinearLayout>
+            </ScrollView>
+            </com.huida.zsxs.view.ProgressLayout>
+        </LinearLayout>
+
+</LinearLayout>

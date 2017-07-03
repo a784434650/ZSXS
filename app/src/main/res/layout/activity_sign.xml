@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:fitsSystemWindows="true">
+    <RelativeLayout
+        style="@style/rl_topbar_bg">
+    <Button
+        android:id="@+id/bt_sign_back"
+        style="@style/bt_topbar_back"
+        android:text="签到"/>
+        <Button
+            android:id="@+id/bt_to_sign"
+            android:textColor="#ffffffff"
+            android:layout_height="25dp"
+            android:layout_width="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/no_sign_back"
+            android:text="签到"/>
+
+    </RelativeLayout>
+
+    <com.huida.zsxs.view.ProgressLayout
+        app:progressBackground="#fff"
+        app:progress="false"
+        android:id="@+id/pl_sign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/srv_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200.0dip">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/to_sign_smart"
+                        android:scaleType="fitXY"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_sign_lianxu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="您已经连续签到2天"
+                            android:textColor="#ff46c26a"
+                            android:textSize="12.0sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_sign_jifen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5.0dip"
+                            android:text="积分+200,"
+                            android:textColor="#ffff2b4b"
+                            android:textSize="12.0sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_qiandaojindu"
+                    android:layout_width="match_parent"
+                    android:layout_height="17.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_qiandao_zong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/to_sign_progress_un"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="每日签到赚积分"
+                    android:textSize="12.0sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffdead"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip">
+
+                    <LinearLayout
+                        android:id="@+id/ll_qiandao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="2.0dip"
+                        android:layout_marginTop="3.0dip"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_one"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="5"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第1天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_jifen_shuzhi1"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_two"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="10"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/iv_qiandao_two"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第2天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_jifen_shuzhi2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_three"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="20"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第3天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_jifen_shuzhi3"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_four"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="30"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第4天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_jifen_shuzhi4"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_five"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="50"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_five"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第5天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_jifen_shuzhi5"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_six"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="100"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_six"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第6天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_jifen_shuzhi6"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qiandao_seven"
+                            android:layout_width="0.0dip"
+                            android:layout_height="68.0dip"
+                            android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/tv_jifen_shuzhi7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="200"
+                                android:textColor="#ffeb9700"
+                                android:textSize="20.0dip"/>
+
+                            <ImageView
+                                android:id="@+id/iv_qiandao_seven"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/qiandao_start"/>
+
+                            <TextView
+                                android:id="@+id/tv_qiandao_tianshu7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="4.0dip"
+                                android:text="第7天"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0dip"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_jifen_shuzhi7"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="2.0dip"
+                                android:text="积分"
+                                android:textColor="#ffeb9700"
+                                android:textSize="12.0dip"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_qiandao"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5.0dip"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="连续签到7天/15天/30天分别额外奖励100积分/200积分/500积分"
+                        android:textColor="#ffff2b4b"
+                        android:textSize="12.0sp"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iv_jifen_shangcheng"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100.0dip"
+                    android:layout_marginTop="2.0dip"
+                    android:background="@mipmap/to_sign_guangao1"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="免费抽奖赢积分"
+                    android:textSize="12.0sp"/>
+                <ImageView
+                    android:id="@+id/iv_jifen_choujiang"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/to_sign_guanggao2"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+        </ScrollView>
+    </com.huida.zsxs.view.ProgressLayout>
+</LinearLayout>

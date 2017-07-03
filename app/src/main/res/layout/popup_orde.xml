@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e8ffffff"
+    android:gravity="center_horizontal">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.25dp"
+        android:background="#fa7829"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/course_black"
+        android:id="@+id/pop_zonghe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="综合"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/course_black"
+        android:id="@+id/pop_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热门"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/course_black"
+        android:id="@+id/pop_fastnew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="最新"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/course_black"
+        android:id="@+id/pop_pingfen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评分"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/course_black"
+        android:id="@+id/pop_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="价格递增"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/course_black"
+        android:id="@+id/pop_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="价格递减"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</LinearLayout>
