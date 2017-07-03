@@ -23,6 +23,7 @@ import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.huida.zsxs.R;
+import com.huida.zsxs.activity.MainActivity;
 import com.huida.zsxs.activity.MoreTJActivity;
 import com.huida.zsxs.activity.SearchActivity;
 import com.huida.zsxs.adapter.SearchDuShuAdapter;
@@ -33,6 +34,7 @@ import com.huida.zsxs.bean.GetTJCourseBean;
 import com.huida.zsxs.fragment.BaseFragment;
 import com.huida.zsxs.utils.ConstantUtil;
 import com.huida.zsxs.utils.DensityUtil;
+import com.huida.zsxs.utils.SpUtil;
 import com.huida.zsxs.view.FlowLayout;
 import com.huida.zsxs.view.ProgressLayout;
 
@@ -48,6 +50,7 @@ import java.util.List;
 
 public class SearchPager {
 
+    private static final String SAVE_FILE = "save_file";
     private final Activity activity;
     private final int tabs;
     private final EditText et_search_list;
@@ -68,6 +71,7 @@ public class SearchPager {
     private boolean is_freshing = false;
     private BaseAdapter baseAdapter;
     private int types;
+    private String[] split;
 
 
     public SearchPager(Activity activity, int tabs, EditText et_search_list){
@@ -90,11 +94,50 @@ public class SearchPager {
         pl_shipin_base_page = (ProgressLayout) view.findViewById(R.id.pl_shipin_base_page);
         flow = (FlowLayout) view.findViewById(R.id.flow);
         pl_shipin_base_page.showProgress();
-        getInitData();
+        //删除的单击事件
+        iv_delete_zuijin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SpUtil.putString(SAVE_FILE,"",activity);
+                getSearchFileData();
+            }
+        });
+        getSearchFileData();//获取保存最近搜索内容的方法
+        getInitData();//获取初始化的数据
         fl_pager_search.addView(view,0);
 
     }
+    //获得搜索的内容
+    private void getSearchFileData() {
+        String file = SpUtil.getString(SAVE_FILE, activity);
+        split = file.split(",");
+        gv_zuijin.setAdapter(new SaveFileAdapter());
+    }
+    public class SaveFileAdapter extends BaseAdapter{
 
+        @Override
+        public int getCount() {
+            return split.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            TextView tv = new TextView(activity);
+            tv.setTextColor(0xff747474);
+            tv.setText(split[position]);
+            return tv;
+        }
+    }
     private void getInitData() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action", "getKeywords");
@@ -297,6 +340,8 @@ public class SearchPager {
 
                     }
                 });
+                //保存最近搜索的内容
+                saveSearchList();
             }
 
             @Override
@@ -314,5 +359,13 @@ public class SearchPager {
 
             }
         });
+    }
+    //存放搜索的条目
+    private void saveSearchList() {
+        String save_file = SpUtil.getString(SAVE_FILE, activity);
+        if (save_file.contains(strings)){
+            return;
+        }
+        SpUtil.putString(SAVE_FILE,strings+","+save_file,activity);
     }
 }
