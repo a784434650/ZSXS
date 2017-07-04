@@ -72,6 +72,7 @@ public class SearchPager {
     private BaseAdapter baseAdapter;
     private int types;
     private String[] split;
+    private TextView tv_zhengdin;
 
 
     public SearchPager(Activity activity, int tabs, EditText et_search_list){
@@ -94,7 +95,7 @@ public class SearchPager {
         pl_shipin_base_page = (ProgressLayout) view.findViewById(R.id.pl_shipin_base_page);
         flow = (FlowLayout) view.findViewById(R.id.flow);
         pl_shipin_base_page.showProgress();
-        //删除的单击事件
+        //删除图标的单击事件
         iv_delete_zuijin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,9 +133,19 @@ public class SearchPager {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            TextView tv = new TextView(activity);
+            final TextView tv = new TextView(activity);
             tv.setTextColor(0xff747474);
             tv.setText(split[position]);
+            //最近搜索的单击事件
+            tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    et_search_list.setText(tv.getText());
+                    setSearchData(tv.getText().toString(),types);
+                    et_search_list.setSelection(tv.getText().length());
+                    SearchActivity.is_init = true;
+                }
+            });
             return tv;
         }
     }
@@ -205,6 +216,7 @@ public class SearchPager {
         lv_search_data_page = (PullToRefreshListView) view.findViewById(R.id.lv_search_data_page);
         pl_shipin_data_page = (ProgressLayout) view.findViewById(R.id.pl_shipin_data_page);
         ll_no_data = (LinearLayout) view.findViewById(R.id.ll_no_data);
+        tv_zhengdin = (TextView) view.findViewById(R.id.tv_zhengdin);
         pl_shipin_data_page.showProgress();
         getSearchData();
         initRefresh();
@@ -304,12 +316,19 @@ public class SearchPager {
                 GetSearchCourseBean searchCourseBean = gson.fromJson(result, GetSearchCourseBean.class);
                 courseList = searchCourseBean.courseList;
                 if (courseList.size()==0){
+                    lv_search_data_page.setVisibility(View.GONE);
                     ll_no_data.setVisibility(View.VISIBLE);
-                    return;
+
                     //无搜索内容，单击跳转到征订页面（个人中心）
+                    tv_zhengdin.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
 
-
+                        }
+                    });
+                    return;
                 }
+                lv_search_data_page.setVisibility(View.VISIBLE);
                 ll_no_data.setVisibility(View.GONE);
                 page_now = searchCourseBean.page_now;
                 page_all = searchCourseBean.page_all;

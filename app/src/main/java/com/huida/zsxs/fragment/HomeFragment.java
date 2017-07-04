@@ -387,12 +387,16 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                             }else if(slidesBeanList.get(position%slidesBeanList.size()).pictype.equals("web")){
                                 // "pictype":"app"（值为APP时候连接APP的专题页，为web时候连接到picUR，
                                 // *注：连接到picUR后需要传递两个参数acode=ACODE值&uid=用户帐号）
+                                String url = slidesBeanList.get(position % slidesBeanList.size()).picURL;
+                                if (SpUtil.getBoolean(MainActivity.IS_LOGIN,mActivity)){
+                                    String acode = SpUtil.getString(LoginActivity.ACODE, mActivity);
+                                    String username = SpUtil.getString(LoginActivity.USERNAME, mActivity);
+                                    url = url+"&acode="+acode+"&uid="+username;
 
-
-
+                                }
                                 Intent intent = new Intent(mActivity, WebViewActivity.class);
                                 intent.putExtra("title","网站");
-                                intent.putExtra("url", slidesBeanList.get(position%slidesBeanList.size()).picURL);
+                                intent.putExtra("url", url);
                                 startActivity(intent);
                             }
 
