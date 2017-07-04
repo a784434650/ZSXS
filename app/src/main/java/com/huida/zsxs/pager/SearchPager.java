@@ -1,6 +1,7 @@
 package com.huida.zsxs.pager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -23,6 +24,7 @@ import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.huida.zsxs.R;
+import com.huida.zsxs.activity.ArticleActivity;
 import com.huida.zsxs.activity.MainActivity;
 import com.huida.zsxs.activity.MoreTJActivity;
 import com.huida.zsxs.activity.SearchActivity;
@@ -356,7 +358,20 @@ public class SearchPager {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         //条目单击事件（播放等）
-
+                switch (kc_types){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        //跳转到文章页面
+                        Intent intent = new Intent(activity, ArticleActivity.class);
+                        intent.putExtra("id",courseList.get(position-1).kc_id);
+                        activity.startActivity(intent);
+                        break;
+                }
 
                     }
                 });

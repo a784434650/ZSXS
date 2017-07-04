@@ -46,6 +46,7 @@
             android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity android:name=".activity.SearchActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity android:name=".activity.ArticleActivity"/>
     </application>
 
 </manifest>

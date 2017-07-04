@@ -391,7 +391,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                                 if (SpUtil.getBoolean(MainActivity.IS_LOGIN,mActivity)){
                                     String acode = SpUtil.getString(LoginActivity.ACODE, mActivity);
                                     String username = SpUtil.getString(LoginActivity.USERNAME, mActivity);
-                                    url = url+"&acode="+acode+"&uid="+username;
+                                    url = url+"?acode="+acode+"&uid="+username;
 
                                 }
                                 Intent intent = new Intent(mActivity, WebViewActivity.class);
