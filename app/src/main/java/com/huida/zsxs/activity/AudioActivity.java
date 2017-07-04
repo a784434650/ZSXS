@@ -8,13 +8,11 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
 import com.huida.zsxs.R;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-import static com.huida.zsxs.R.mipmap.back;
 
 public class AudioActivity extends Activity implements View.OnClickListener{
 
