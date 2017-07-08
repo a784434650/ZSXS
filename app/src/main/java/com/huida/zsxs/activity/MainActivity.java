@@ -143,6 +143,7 @@ public class MainActivity extends FragmentActivity {
         public int getCount() {
             return fragmentList.size();
         }
+
     }
     //返回键，弹出对话框（自定义对话框）
     @Override
@@ -171,6 +172,7 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onDestroy() {
+        super.onDestroy();
         SpUtil.putBoolean(IS_LOGIN,false,MainActivity.this);
     }
 }

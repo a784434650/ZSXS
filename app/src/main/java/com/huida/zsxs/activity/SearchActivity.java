@@ -77,7 +77,7 @@ public class SearchActivity extends Activity implements View.OnClickListener{
         }
         vp_search.setAdapter(new contentAdapter());
         //默认初始化第一页
-        pagerList.get(0).setInitData();
+        pagerList.get(0).setInitData(0);
         //指示器的宽度的初始化
         screenWidth = getWindowManager().getDefaultDisplay().getWidth();
         params = (RelativeLayout.LayoutParams) search_view_line.getLayoutParams();
@@ -113,7 +113,7 @@ public class SearchActivity extends Activity implements View.OnClickListener{
                 search_view_line.setLayoutParams(params);
                 //pagerList.get(position).setInitData();
                 if (!is_init){
-                    pagerList.get(position).setInitData();
+                    pagerList.get(position).setInitData(position);
                 }else{
                     String et_list = et_search_list.getText().toString().trim();
                     pagerList.get(position).setSearchData(et_list,position);
@@ -129,19 +129,33 @@ public class SearchActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        //点击页签也获取相应的内容（优化）
+        int temp = 0;
         switch (v.getId()){
             case R.id.search_shipin_tv:
                 vp_search.setCurrentItem(0);
+                temp = 0;
                 break;
             case R.id.search_yinpin_tv:
                 vp_search.setCurrentItem(1);
+                temp = 1;
                 break;
             case R.id.search_dushu_tv:
                 vp_search.setCurrentItem(2);
+                temp = 2;
                 break;
             case R.id.search_wenzhang_tv:
                 vp_search.setCurrentItem(3);
+                temp = 3;
                 break;
+        }
+        if (is_init){
+            String search_list = et_search_list.getText().toString().trim();
+            pagerList.get(temp).setSearchData(search_list,temp);
+            is_init = true;
+        }else{
+            pagerList.get(temp).setInitData(temp);
+            is_init = false;
         }
     }
 
@@ -201,7 +215,7 @@ public class SearchActivity extends Activity implements View.OnClickListener{
                     ib_clear_edit.setVisibility(View.INVISIBLE);
                     //最近搜索
                     is_init = false;
-                    pagerList.get(vp_search.getCurrentItem()).setInitData();
+                    pagerList.get(vp_search.getCurrentItem()).setInitData(vp_search.getCurrentItem());
 
 
                 }

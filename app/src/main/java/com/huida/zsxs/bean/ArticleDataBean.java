@@ -1,12 +1,13 @@
 package com.huida.zsxs.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by xiaojiu on 2017/7/4.
  */
 
-public class ArticleDataBean {
+public class ArticleDataBean implements Serializable{
     public String shoucang;
     public String buy;
     public String kc_id;
