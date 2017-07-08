@@ -444,4 +444,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         initData();
         return view;
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
+    }
 }

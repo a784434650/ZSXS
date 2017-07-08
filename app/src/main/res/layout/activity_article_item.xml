@@ -140,7 +140,6 @@
                                     android:layout_height="wrap_content">
 
                                     <LinearLayout
-                                        android:visibility="invisible"
                                         android:id="@+id/ll_has_pl"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -200,7 +199,7 @@
 
                                                     <TextView
                                                         android:id="@+id/tv_pl_content"
-                                                        android:layout_width="fill_parent"
+                                                        android:layout_width="match_parent"
                                                         android:layout_height="wrap_content"
                                                         android:paddingTop="15.0dip"
                                                         android:text="今天甜人格和体育与托管人特也热热提问烦恼都烦死你放假你纷纷日亢"

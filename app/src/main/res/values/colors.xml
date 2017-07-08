@@ -18,4 +18,5 @@
     <color name="course_type">#c1c4bd</color>
     <color name="course_black">#000000</color>
     <color name="text_green">#5fda5f</color>
+    <color name="pinglun_text_color">#ff666666</color>
 </resources>

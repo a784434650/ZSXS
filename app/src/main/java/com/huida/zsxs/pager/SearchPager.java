@@ -89,7 +89,8 @@ public class SearchPager {
         fl_pager_search = (FrameLayout) view.findViewById(R.id.fl_pager_search);
         return view;
     }
-    public void setInitData() {
+    public void setInitData(int temp) {
+        types = temp;
         fl_pager_search.removeAllViews();
         View view = View.inflate(activity, R.layout.search_shipin_init_page, null);
         iv_delete_zuijin = (ImageView) view.findViewById(R.id.iv_delete_zuijin);
@@ -151,7 +152,7 @@ public class SearchPager {
             return tv;
         }
     }
-    //获取初始化的数据
+    //获取初始化的数据（热门搜索）
     private void getInitData() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action", "getKeywords");
@@ -265,7 +266,7 @@ public class SearchPager {
             }
         });
     }
-
+    //获取更多数据
     private void getMoreData() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action", "searchCourse");
@@ -302,7 +303,7 @@ public class SearchPager {
             }
         });
     }
-
+    //获取搜索内容（搜索按钮）
     private void getSearchData() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action", "searchCourse");
@@ -311,7 +312,7 @@ public class SearchPager {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.e("jdr",result);
+                //Log.e("jdr",result);
                 pl_shipin_data_page.showContent();
                 result = result.replace("\\","/");
                 Gson gson = new Gson();
@@ -395,7 +396,7 @@ public class SearchPager {
             }
         });
     }
-    //存放搜索的条目
+    //保存最近搜索的内容
     private void saveSearchList() {
         String save_file = SpUtil.getString(SAVE_FILE, activity);
         if (save_file.contains(strings)){
