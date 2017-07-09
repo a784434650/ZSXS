@@ -95,12 +95,14 @@ public class PingLunMoreActivity extends Activity {
             lv_pl_list.setAdapter(pingLunAdapter);
             initRefresh();
         }
+        //返回事件
         bt_pl_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+        //发送按钮的单击事件
         bt_pl_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,6 +186,7 @@ public class PingLunMoreActivity extends Activity {
             return convertView;
         }
     }
+    //刷新
     private void initRefresh() {
         final ILoadingLayout proxy = lv_pl_list.getLoadingLayoutProxy();
         lv_pl_list.setMode(PullToRefreshBase.Mode.BOTH);
@@ -224,7 +227,7 @@ public class PingLunMoreActivity extends Activity {
             }
         });
     }
-
+    //从网络获取评论
     private void getPingLunFromNet() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action","GetCoursePL");
@@ -274,7 +277,7 @@ public class PingLunMoreActivity extends Activity {
             }
         });
     }
-
+    //从网络获取更多评论
     private void getMoreData() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
         params.addBodyParameter("Action","GetPLBean");
