@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.huida.zsxs.R;
@@ -182,7 +183,28 @@ public class ArticleActivity extends Activity implements View.OnClickListener{
         rl_share.setOnClickListener(this);
         ll_dayi.setOnClickListener(this);
         ll_pl.setOnClickListener(this);
-        rl_shoucang.setOnClickListener(this);
+        //收藏的点击事件
+        rl_shoucang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (SpUtil.getBoolean(MainActivity.IS_LOGIN,ArticleActivity.this)) {
+                    if (articleDataBean.shoucang.equals("0")){
+                        //添加收藏
+                        addCollect();
+                        getDataFromNet();
+                    }else{
+                        //取消收藏
+                        removeCollect();
+                        getDataFromNet();
+                    }
+
+
+                }else{
+                    Intent intent = new Intent(ArticleActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
     //获取文章内容
     private void getDataFromNet() {
@@ -239,6 +261,71 @@ public class ArticleActivity extends Activity implements View.OnClickListener{
             }
         });
     }
+    //取消收藏
+    private void removeCollect() {
+        RequestParams params = new RequestParams(ConstantUtil.PATH);
+        params.addBodyParameter("Action","DeleteFavorite");
+        params.addBodyParameter("cid", id);
+        String acode = SpUtil.getString(LoginActivity.ACODE, this);
+        String username = SpUtil.getString(LoginActivity.USERNAME, this);
+        params.addBodyParameter("acode",acode);
+        params.addBodyParameter("Uid",username);
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Toast.makeText(ArticleActivity.this, "取消收藏成功", Toast.LENGTH_SHORT).show();
+                shoucang_iv.setBackgroundResource(R.mipmap.voice_shoucang);
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+    }
+    //添加收藏
+    private void addCollect() {
+        RequestParams params = new RequestParams(ConstantUtil.PATH);
+        params.addBodyParameter("Action","SaveFavorite");
+        params.addBodyParameter("cid", id);
+        String acode = SpUtil.getString(LoginActivity.ACODE, this);
+        String username = SpUtil.getString(LoginActivity.USERNAME, this);
+        params.addBodyParameter("acode",acode);
+        params.addBodyParameter("Uid",username);
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Toast.makeText(ArticleActivity.this, "收藏成功", Toast.LENGTH_SHORT).show();
+                shoucang_iv.setBackgroundResource(R.mipmap.has_collect);
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+    }
+
     //获取精彩评论内容
     private void getPingLunContent() {
         RequestParams params = new RequestParams(ConstantUtil.PATH);
